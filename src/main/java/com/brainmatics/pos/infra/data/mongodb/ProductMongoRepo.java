@@ -9,12 +9,12 @@ import java.util.ArrayList;
 public class ProductMongoRepo implements ProductRepo {
 
     public int getCount() {
-        System.out.println("from mongggodb");
+        System.out.println("from mongodb");
         return 1;
     }
 
     public Product getById(int id) {
-        System.out.println("from mongggodb");
+        System.out.println("from mongodb");
         return new Product();
     }
 
