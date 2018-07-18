@@ -10,6 +10,7 @@ public class ProductMongoRepo implements ProductRepo {
 
     public int getCount() {
         System.out.println("from manggadb");
+        System.out.println("from mongodbAAAA");
         return 1;
     }
 
