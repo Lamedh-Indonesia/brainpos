@@ -1,7 +1,7 @@
 package com.brainmatics.pos.infra.data.inmemory;
 
-import com.brainmatics.pos.core.Product;
-import com.brainmatics.pos.core.ProductRepo;
+import com.brainmatics.pos.core.product.Product;
+import com.brainmatics.pos.core.product.ProductRepo;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

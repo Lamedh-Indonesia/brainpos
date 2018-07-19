@@ -1,4 +1,7 @@
-package com.brainmatics.pos.core;
+package com.brainmatics.pos.core.sale;
+
+import com.brainmatics.pos.core.employee.Employee;
+import com.brainmatics.pos.core.product.Product;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

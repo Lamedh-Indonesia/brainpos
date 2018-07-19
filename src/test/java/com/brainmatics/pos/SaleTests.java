@@ -1,7 +1,7 @@
 package com.brainmatics.pos;
 
-import com.brainmatics.pos.core.Product;
-import com.brainmatics.pos.core.Sale;
+import com.brainmatics.pos.core.product.Product;
+import com.brainmatics.pos.core.sale.Sale;
 import org.junit.Test;
 
 import java.math.BigDecimal;

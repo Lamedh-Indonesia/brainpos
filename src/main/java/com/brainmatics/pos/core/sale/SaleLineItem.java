@@ -1,4 +1,6 @@
-package com.brainmatics.pos.core;
+package com.brainmatics.pos.core.sale;
+
+import com.brainmatics.pos.core.product.Product;
 
 import java.math.BigDecimal;
 

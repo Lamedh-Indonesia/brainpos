@@ -1,27 +1,19 @@
 package com.brainmatics.pos.infra.data.mongodb;
 
-import com.brainmatics.pos.core.Product;
-import com.brainmatics.pos.core.ProductRepo;
-import org.springframework.stereotype.Repository;
+import com.brainmatics.pos.core.product.Product;
+import com.brainmatics.pos.core.product.ProductRepo;
 
 import java.util.ArrayList;
 
 public class ProductMongoRepo implements ProductRepo {
 
     public int getCount() {
-        System.out.println("from manggadb");
-        System.out.println("from mongodbAAAA");
+        System.out.println("from mongodb");
         return 1;
-    }
-
-    public void foo() {
-        System.out.println("Sout");
     }
 
     public Product getById(int id) {
         System.out.println("from mongodb");
-        if (true)
-            System.out.println("true");
         return new Product();
     }
 
@@ -35,5 +27,3 @@ public class ProductMongoRepo implements ProductRepo {
     public void remove(int id) {
     }
 }
-
-
