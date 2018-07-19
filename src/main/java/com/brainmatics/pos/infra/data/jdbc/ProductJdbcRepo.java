@@ -1,14 +1,14 @@
 package com.brainmatics.pos.infra.data.jdbc;
 
 import com.brainmatics.pos.core.product.Product;
-import com.brainmatics.pos.core.product.ProductRepo;
+import com.brainmatics.pos.core.product.ProductRepoNonSpring;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ProductJdbcRepo implements ProductRepo {
+public class ProductJdbcRepo implements ProductRepoNonSpring {
 
     private final String COUNT = "SELECT count(*) from Product";
     private final String INSERT = "INSERT INTO Product (id, code, name, price) VALUES (?, ?, ?, ?)";
