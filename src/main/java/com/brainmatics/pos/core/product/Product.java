@@ -1,21 +1,16 @@
 package com.brainmatics.pos.core.product;
 
+import com.brainmatics.common.EntityBase;
+
+import javax.persistence.Entity;
 import java.math.BigDecimal;
 
-public class Product {
+@Entity
+public class Product extends EntityBase {
 
-    private int id;
     private String code;
     private String name;
     private BigDecimal price;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getCode() {
         return code;

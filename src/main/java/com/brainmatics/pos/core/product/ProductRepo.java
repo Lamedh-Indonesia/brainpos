@@ -1,6 +1,6 @@
 package com.brainmatics.pos.core.product;
 
-import com.brainmatics.common.Repository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface ProductRepo extends Repository<Product> {
+public interface ProductRepo extends CrudRepository<Product, Integer> {
 }

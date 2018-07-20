@@ -1,26 +1,34 @@
 package com.brainmatics.pos.core.sale;
 
+import com.brainmatics.common.EntityBase;
 import com.brainmatics.pos.core.employee.Employee;
 import com.brainmatics.pos.core.product.Product;
 
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
-public class Sale {
+@Entity
+public class Sale extends EntityBase {
 
-    private int id;
+    private String code;
     private LocalDateTime time;
 
+    @ManyToOne
     private Employee cashier;
-    private ArrayList<SaleLineItem> lineItems;
+    @ElementCollection
+    private List<SaleLineItem> lineItems;
 
-    public int getId() {
-        return id;
+    public String getCode() {
+        return code;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public LocalDateTime getTime() {
@@ -39,7 +47,7 @@ public class Sale {
         this.cashier = cashier;
     }
 
-    public ArrayList<SaleLineItem> getLineItems() {
+    public List<SaleLineItem> getLineItems() {
         return lineItems;
     }
 
@@ -56,10 +64,6 @@ public class Sale {
     public BigDecimal getTotal() {
         return lineItems.stream()
                 .map(SaleLineItem::getSubtotal)
-                .reduce(BigDecimal.ZERO, (a, b) -> a.add(b));
-//        BigDecimal total = BigDecimal.ZERO;
-//        for (SaleLineItem sli: lineItems)
-//            total = total.add(sli.getSubtotal());
-//        return total;
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 }

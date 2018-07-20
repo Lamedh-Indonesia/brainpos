@@ -2,7 +2,7 @@ package com.brainmatics.common;
 
 import java.util.List;
 
-public interface Repository<E> {
+public interface RepositoryNonSpring<E> {
 
     int getCount();
     E getById(int id);

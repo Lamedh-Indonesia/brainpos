@@ -1,11 +1,11 @@
 package com.brainmatics.pos.infra.data.mongodb;
 
 import com.brainmatics.pos.core.product.Product;
-import com.brainmatics.pos.core.product.ProductRepo;
+import com.brainmatics.pos.core.product.ProductRepoNonSpring;
 
 import java.util.ArrayList;
 
-public class ProductMongoRepo implements ProductRepo {
+public class ProductMongoRepo implements ProductRepoNonSpring {
 
     public int getCount() {
         System.out.println("from mongodb");

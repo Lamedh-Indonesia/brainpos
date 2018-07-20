@@ -1,20 +1,27 @@
 package com.brainmatics.pos.core.employee;
 
 
+import com.brainmatics.common.EntityBase;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
-public class Employee {
+@Entity
+public class Employee extends EntityBase {
 
-    private int id;
+    private String code;
     private String name;
     private LocalDate birthDate;
 
-    public int getId() {
-        return id;
+    @Embedded
+    private Address home;
+
+    public String getCode() {
+        return code;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getName() {
@@ -35,6 +42,14 @@ public class Employee {
 
     public int getAge() {
         return LocalDate.now().getYear() - birthDate.getYear();
+    }
+
+    public Address getHome() {
+        return home;
+    }
+
+    public void setHome(Address home) {
+        this.home = home;
     }
 
     public Employee() {

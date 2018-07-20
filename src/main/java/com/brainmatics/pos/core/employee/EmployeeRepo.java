@@ -1,6 +1,6 @@
 package com.brainmatics.pos.core.employee;
 
-import com.brainmatics.common.Repository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface EmployeeRepo extends Repository<Employee> {
+public interface EmployeeRepo extends CrudRepository<Employee, Integer> {
 }
